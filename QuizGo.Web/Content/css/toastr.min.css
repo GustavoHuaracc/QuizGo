@@ -1,0 +1,221 @@
+.toast-title {
+    font-weight: 700
+}
+
+.toast-message {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word
+}
+
+.toast-message a, .toast-message label {
+    color: #fff
+}
+
+.toast-message a:hover {
+    color: #ccc;
+    text-decoration: none
+}
+
+.toast-close-button {
+    position: relative;
+    right: -.3em;
+    top: -.3em;
+    float: right;
+    color: #fff;
+    -webkit-text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .8;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    filter: alpha(opacity=80)
+}
+
+.toast-close-button:focus, .toast-close-button:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .4;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    filter: alpha(opacity=40)
+}
+
+button.toast-close-button {
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    -webkit-appearance: none
+}
+
+button.toast-close-button svg {
+    width: 1em;
+    height: 1em;
+}
+/* Config das formas */
+button.toast-close-button svg path,
+button.toast-close-button svg polygon,
+button.toast-close-button svg rect {
+    /* Define cor de preenchimento */
+    fill: #FFFFFF;
+}
+
+.toast-top-center {
+    top: 0;
+    right: 0;
+    width: 100%
+}
+
+.toast-bottom-center {
+    bottom: 0;
+    right: 0;
+    width: 100%
+}
+
+.toast-top-full-width {
+    top: 0;
+    right: 0;
+    width: 100%
+}
+
+.toast-bottom-full-width {
+    bottom: 0;
+    right: 0;
+    width: 100%
+}
+
+.toast-top-left {
+    top: 12px;
+    left: 12px
+}
+
+.toast-top-right {
+    top: 12px;
+    right: 12px
+}
+
+.toast-bottom-right {
+    right: 12px;
+    bottom: 12px
+}
+
+.toast-bottom-left {
+    bottom: 12px;
+    left: 12px
+}
+
+#toast-container {
+    position: fixed;
+    z-index: 999999;
+    top: -56px;
+    pointer-events: none
+    -webkit-transition: top 300ms ease-out;
+    -moz-transition: top 300ms ease-out;
+    transition: top 300ms ease-out;
+    overflow: hidden;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#toast-container.open {
+    top: 0px;
+}
+#toast-container.close {
+    top: -64px;
+    -webkit-transition: top 300ms ease-in;
+    -moz-transition: top 300ms ease-in;
+    transition: top 300ms ease-in;
+}
+
+#toast-container * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+#toast-container > div {
+    min-height: 56px;
+    width: 100%;
+    z-index: 1050;
+    text-align: center;
+    -webkit-transition: top 300ms ease-out;
+    -moz-transition: top 300ms ease-out;
+    transition: top 300ms ease-out;
+}
+
+#toast-container.toast-bottom-center > div, #toast-container.toast-top-center > div {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#toast-container.toast-bottom-full-width > div, #toast-container.toast-top-full-width > div {
+    left: 0;
+    width: 100%;
+    padding: 20px 20px;
+}
+
+.toast {
+    background-color: #e75b5c;
+    color: white;
+}
+
+.toast-success {
+    background-color: #51bb83;
+    color: white;
+}
+
+.toast-error {
+    background-color: #e75b5c;
+    color: white;
+}
+
+.toast-info {
+    background-color: #51bb83;
+    color: white;
+}
+
+.toast-warning {
+    background-color: #e75b5c;
+    color: white;
+}
+
+.toast-progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: #000;
+    opacity: .4;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    filter: alpha(opacity=40)
+}
+
+@media all and (max-width: 240px) {
+    #toast-container > div {
+        padding: 8px 8px 8px 50px;
+        width: 11em
+    }
+
+    #toast-container .toast-close-button {
+        right: -.2em;
+        top: -.2em
+    }
+}
+
+@media all and (min-width: 241px) and (max-width: 480px) {
+    #toast-container > div {
+        padding: 8px 8px 8px 50px;
+        width: 18em
+    }
+
+    #toast-container .toast-close-button {
+        right: -.2em;
+        top: -.2em
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+    #toast-container > div {
+        padding: 15px 15px 15px 50px;
+        width: 25em
+    }
+}
